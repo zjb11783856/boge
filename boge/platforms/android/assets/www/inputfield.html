@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+	    <title>Sencha Touch Tutorials</title>
+
+		<link rel="stylesheet" href="resources/css/app.css" />
+		<script type="text/javascript" src="sencha-touch-all.js" ></script>
+    </head>
+    <body>
+    </body>
+    <script language="JavaScript">
+    	Ext.application({
+    	    name: 'corsee',
+
+    	    launch: function() {
+    	    	var config={
+    	    		items: [
+    	    			{
+    	    				xtype: 'titlebar',
+    	    				title: 'InputField使用',
+    	    				iconCls: 'home',
+    	    				items: [
+    	    					{
+    	    						xtype: 'button',
+    	    						text: 'back',
+    	    						handler: function() {
+    	    							window.history.back();
+    	    						}
+    	    					}
+    	    				]
+    	    			},
+                        {
+                            xtype:'container',
+                            width: '100%',
+                            top:47,
+                            bottom: 0,
+                            scrollable: 'vertical',
+                            items: 
+                                [
+                                            {
+                                                xtype: 'fieldset',
+                                                title: 'Personal Info',
+                                                instructions: 'Please enter the information above.',
+                                                defaults: {
+                                                    required: true
+                                                },
+                                                items: [
+                                                    {
+                                                        xtype: 'textfield',
+                                                        name: 'name',
+                                                        label: 'Name',
+                                                        autoCapitalize: false
+                                                    },
+                                                    {
+                                                        xtype: 'passwordfield',
+                                                        name: 'password',
+                                                        label: 'Password'
+                                                    },
+                                                    {
+                                                        xtype: 'textfield',
+                                                        name: 'disabled',
+                                                        label: 'Disabled',
+                                                        disabled: true
+                                                    },
+                                                    {
+                                                        xtype: 'emailfield',
+                                                        name: 'email',
+                                                        label: 'Email',
+                                                        placeHolder: 'you@sencha.com'
+                                                    },
+                                                    {
+                                                        xtype: 'urlfield',
+                                                        name: 'url',
+                                                        label: 'Url',
+                                                        placeHolder: 'http://sencha.com'
+                                                    },
+                                                    {
+                                                        xtype: 'checkboxfield',
+                                                        name: 'cool',
+                                                        label: 'Cool',
+                                                        value: true
+                                                    },
+                                                    {
+                                                        xtype: 'spinnerfield',
+                                                        name: 'spinner',
+                                                        label: 'Spinner'
+                                                    },
+                                                    {
+                                                        xtype: 'selectfield',
+                                                        name: 'rank',
+                                                        label: 'Rank',
+                                                        valueField: 'rank',
+                                                        displayField: 'title',
+                                                        store: {
+                                                            data: [
+                                                                { rank: 'master', title: 'Master'},
+                                                                { rank: 'padawan', title: 'Student'},
+                                                                { rank: 'teacher', title: 'Instructor'},
+                                                                { rank: 'aid', title: 'Assistant'}
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        xtype: 'datepickerfield',
+                                                        name: 'date',
+                                                        label: 'Start Date',
+                                                        value: new Date(),
+                                                        picker: {
+                                                            yearFrom: 1980
+                                                        }
+                                                    },
+                                                    {
+                                                        xtype: 'hiddenfield',
+                                                        name: 'secret',
+                                                        value: 'false'
+                                                    },
+                                                    {
+                                                        xtype: 'textareafield',
+                                                        name: 'bio',
+                                                        label: 'Bio',
+                                                        maxRows: 10
+                                                    },
+                                                    {
+                                                        xtype: 'sliderfield',
+                                                        name: 'height',
+                                                        label: 'Height'
+                                                    },
+                                                    {
+                                                        xtype: 'togglefield',
+                                                        name: 'enable',
+                                                        label: 'Security Mode'
+                                                    },
+                                                    {
+                                                        xtype: 'radiofield',
+                                                        name: 'team',
+                                                        label: 'Red Team',
+                                                        value: 'redteam'
+                                                    },
+                                                    {
+                                                        xtype: 'radiofield',
+                                                        name: 'team',
+                                                        label: 'Blue Team',
+                                                        value: 'blueteam'
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                xtype: 'fieldset',
+                                                title: 'Favorite color',
+                                                defaults: { xtype: 'radiofield' },
+                                                items: [
+                                                    { name: 'color', label: 'Red', value: 'red' },
+                                                    { name: 'color', label: 'Green', checked: true, value: 'green'}
+                                                ]
+                                            },
+                                            {
+                                                xtype: 'fieldset',
+                                                title: 'HTML5',
+                                                items: [
+                                                    {
+                                                        xtype: 'numberfield',
+                                                        name: 'number',
+                                                        label: 'Number'
+                                                    },
+                                                    {
+                                                        xtype: 'emailfield',
+                                                        name: 'email2',
+                                                        label: 'Email',
+                                                        clearIcon: true
+                                                    },
+                                                    {
+                                                        xtype: 'urlfield',
+                                                        name: 'url2',
+                                                        label: 'URL',
+                                                        clearIcon: true
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                xtype: 'fieldset',
+                                                title: 'Single Select',
+                                                items: [
+                                                    {
+                                                        xtype: 'selectfield',
+                                                        name: 'options',
+                                                        options: [
+                                                            {text: 'This is just a big select with text that is overflowing', value: '1'},
+                                                            {text: 'Another item', value: '2'}
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                xtype: 'fieldset',
+                                                title: 'Single Text',
+                                                items: [
+                                                    {
+                                                        xtype: 'textfield',
+                                                        name: 'single_text',
+                                                        clearIcon: true
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                xtype: 'fieldset',
+                                                title: 'Single Toggle',
+                                                items: [
+                                                    {
+                                                        xtype: 'togglefield',
+                                                        name: 'single_toggle',
+                                                        value: 1
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                xtype: 'fieldset',
+                                                title: 'Single Slider',
+                                                items: [
+                                                    {
+                                                        xtype: 'sliderfield',
+                                                        name: 'single_slider',
+                                                        value: 60
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                xtype: 'fieldset',
+                                                title: 'Multiple Slider Thumbs',
+                                                items: [
+                                                    {
+                                                        xtype: 'sliderfield',
+                                                        name: 'multiple_slider',
+                                                        values: [40, 90]
+                                                    }
+                                                ]
+                                            }
+                            ]
+                        }
+    	    		]
+    	    	};
+    	    	if(Ext.os.is.Phone)
+    	    		Ext.apply(config,{fullscreen: true});
+    	    	else
+    	    		Ext.apply(config,{width: 320,height: 576,centered: true,modal: true});
+    	    	var frmmain = Ext.create('Ext.Panel',config);
+    	    	Ext.Viewport.add(frmmain);
+    		},
+    	});
+    </script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+	    <title>Sencha Touch Tutorials</title>
+
+		<link rel="stylesheet" href="resources/css/app.css" />
+		<script type="text/javascript" src="sencha-touch-all.js" ></script>
+    </head>
+    <body>
+    </body>
+    <script language="JavaScript">
+    	Ext.application({
+    	    name: 'corsee',
+
+    	    launch: function() {
+                Ext.override(Ext.MessageBox, {    
+                    hide:  function() {
+                        if (this.activeAnimation && this.activeAnimation._onEnd) {
+                            this.activeAnimation._onEnd();
+                        }
+                        return this.callParent(arguments);
+                    }
+                });
+    	    	var config={
+    	    		items: [
+    	    			{
+    	    				xtype: 'toolbar',
+    	    				title: 'ajax',
+    	    				iconCls: 'home',
+    	    				items: [
+    	    					{
+    	    						xtype: 'button',
+    	    						text: 'back',
+    	    						handler: function() {
+    	    							window.history.back();
+    	    						}
+    	    					},{xtype:'spacer'},
+                                {
+                                    xtype: 'button',
+                                    text: 'Ajax Test',
+                                    handler: function() {
+                                        Ext.Ajax.request({
+                                            url:'http://42.120.4.198/e-track.php?cmd=getsign',
+                                            useDefaultXhrHeader: false,
+                                            mothed:'GET',
+                                            success: function(response) {
+                                                var ldata=JSON.parse(response.responseText);
+                                                Ext.Msg.alert('标题',ldata.error_msg,Ext.EmptyFn);
+                                            },
+                                            failure: function(data) {
+                                                Ext.Msg.alert('标题','网络不给力喔',Ext.EmptyFn);
+                                            }
+                                        })
+                                    }
+                                }
+    	    				]
+    	    			}
+    	    		]
+    	    	};
+    	    	if(Ext.os.is.Phone)
+    	    		Ext.apply(config,{fullscreen: true});
+    	    	else
+    	    		Ext.apply(config,{width: 320,height: 576,centered: true,modal: true});
+    	    	var frmmain = Ext.create('Ext.Panel',config);
+    	    	Ext.Viewport.add(frmmain);
+    		},
+    	});
+    </script>
+</html>

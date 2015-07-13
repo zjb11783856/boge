@@ -1,0 +1,69 @@
+// The following two lines import the default Sencha Touch theme. If you are building
+// a new theme, remove them and the add your own CSS on top of the base CSS (which
+// is already included in your app.json file).
+$base-color:#BABABC;
+$base-background:#BABABC;
+$base-gradient: 'flat';
+$active-color: #239be2;
+$tabs-dark: darken($base-color, 20%);
+$tabs-dark-active-color: saturate($active-color, 20%);
+$tabs-bottom-active-gradient: 'flat';
+
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
+//@import 'sencha-touch/mountainview';
+//@import 'sencha-touch/mountainview/all';
+
+@include sencha-tabbar-ui("gray",#545456,"falt",#159ae5);
+//@include sencha-toolbar-ui("blue",#2496ee,"flat",#159ae5);
+@include icon('camera');
+@include icon('flag');
+@include icon('info');
+
+.x-form-fieldset {
+    .x-form-fieldset-inner {
+        border: none;
+        background: #BABABC;
+    }
+    .x-form-fieldset-instructions .x-innerhtml {
+        color: #000;
+    }
+}
+
+.x-field-select .x-form-label {
+    background:#BABABC;
+    border: none;
+}
+
+.x-field-password .x-form-label {
+    background:#BABABC;
+    border: none;
+}
+
+.x-field-text .x-form-label {
+	background:#BABABC;
+    border: none;
+}
+
+.x-form-field {
+	background: #BABABC;
+}
+
+.x-field-radio .x-form-label {
+	background:#BABABC;
+    border: none;
+}
+
+
+.x-toggle-field .x-form-label {
+    background: none;
+    border: none;
+    margin-bottom: 20px;
+}
+.x-toggle {
+    position: absolute;
+    right: 0;
+}
+
+// Examples of using the icon mixin:
+// @include icon('user');

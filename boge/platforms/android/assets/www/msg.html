@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+	    <title>Sencha Touch Tutorials</title>
+
+		<link rel="stylesheet" href="resources/css/app.css" />
+		<script type="text/javascript" src="sencha-touch-all.js" ></script>
+    </head>
+    <body>
+    </body>
+    <script language="JavaScript">
+    	Ext.application({
+    	    name: 'corsee',
+
+    	    launch: function() {
+    	    	var config={
+    	    		items: [
+    	    			{
+    	    				xtype: 'toolbar',
+    	    				title: '',
+    	    				iconCls: 'home',
+                            inline: {
+                                    wrap:true
+                            },
+    	    				items: [
+    	    					{
+    	    						xtype: 'button',
+    	    						text: 'back',
+    	    						handler: function() {
+    	    							window.history.back();
+    	    						}
+    	    					}
+                            ]
+                        },
+                        {
+                            xtype: 'toolbar',
+                            title: '',
+                            iconCls: 'home',
+                            inline: {
+                                    wrap:true
+                            },
+                            items: [
+                                {
+                                    xtype: 'button',
+                                    text: 'alert',
+                                    handler: function() {
+                                        Ext.Msg.alert('标题','内容',Ext.EmptyFn);
+                                    }
+                                },
+                                {
+                                    xtype: 'button',
+                                    text: 'prompt',
+                                    handler: function() {
+                                        Ext.Msg.prompt('标题','内容',Ext.EmptyFn);
+                                    }
+                                },
+                                {
+                                    xtype: 'button',
+                                    text: 'Confirm',
+                                    handler: function() {
+                                        Ext.Msg.confirm('标题','内容',Ext.EmptyFn);
+                                    }
+                                },
+                                {
+                                    type:'button',
+                                    text: '自定义',
+                                    handler: function() {
+                                            var inputdesc = Ext.create('Ext.MessageBox',{
+                                               height: 300,
+                                               width: window.innerWidth-20,
+                                               title: '输入分享信息',
+                                               items: [
+                                                    {
+                                                            xtype:'label',
+                                                            top: 10,
+                                                            left: 10,
+                                                            html:'<span style="font-size:small;color:#FFFFFF;">标题</span>'
+                                                    },
+                                                    {
+                                                        xtype:'textfield',
+                                                        left: 10,
+                                                        top: 40,
+                                                        id: 'sharetitle_id',
+                                                        width: window.innerWidth-40
+                                                    },
+                                                    {
+                                                            xtype:'label',
+                                                            top: 80,
+                                                            left: 10,
+                                                            html:'<span style="font-size:small;color:#FFFFFF;">内容</span>'
+                                                    },
+                                                    {
+                                                        xtype:'textareafield',
+                                                        top: 110,
+                                                        left: 10,
+                                                        width: window.innerWidth-40,
+                                                        id: 'sharecontent_id',
+                                                        height: 100
+                                                    }
+                                               ],
+                                               buttons: [
+                                                   {
+                                                      text:'确认',
+                                                      handler: function () {
+                                                          inputdesc.hide();
+                                                          inputdesc.destroy();
+                                                      }
+                                                   },
+                                                   {
+                                                      text:'取消',
+                                                      handler: function() {
+                                                          inputdesc.hide();
+                                                          inputdesc.destroy();
+                                                      }
+                                                   },
+                                                   {
+                                                      text:'其他',
+                                                      handler: function() {
+                                                          inputdesc.hide();
+                                                          inputdesc.destroy();
+                                                      }
+                                                   }
+                                               ]
+                                            });
+                                            inputdesc.show();
+                                    }
+                                }
+    	    				]
+    	    			}
+    	    		]
+    	    	};
+    	    	if(Ext.os.is.Phone)
+    	    		Ext.apply(config,{fullscreen: true});
+    	    	else
+    	    		Ext.apply(config,{width: 320,height: 576,centered: true,modal: true});
+    	    	var frmmain = Ext.create('Ext.Panel',config);
+    	    	Ext.Viewport.add(frmmain);
+    		},
+    	});
+    </script>
+</html>

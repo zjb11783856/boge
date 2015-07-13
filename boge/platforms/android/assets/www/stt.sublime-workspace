@@ -1,0 +1,1292 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"g",
+				"gCount"
+			],
+			[
+				"inner",
+				"innerWidth〔variable〕"
+			],
+			[
+				"inn",
+				"innerWidth〔variable〕"
+			],
+			[
+				"html",
+				"styleHtmlContent"
+			],
+			[
+				"reg",
+				"RegisterUser"
+			],
+			[
+				"fa",
+				"failure"
+			],
+			[
+				"erro",
+				"error_msg"
+			],
+			[
+				"resp",
+				"responseText"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"back-g",
+				"background-color"
+			],
+			[
+				"respo",
+				"response"
+			],
+			[
+				"pl",
+				"placeHolder"
+			],
+			[
+				"id_retr",
+				"id_retrievecode"
+			],
+			[
+				"idretrie",
+				"id_retrievecode"
+			],
+			[
+				"err",
+				"error_msg"
+			],
+			[
+				"id_re",
+				"id_retrivemail"
+			],
+			[
+				"id_ret",
+				"id_retrieveuser"
+			],
+			[
+				"fieds",
+				"fieldset"
+			],
+			[
+				"grou",
+				"grouped"
+			],
+			[
+				"Ex",
+				"extend"
+			],
+			[
+				"emp",
+				"emptyFn"
+			],
+			[
+				"msg",
+				"Msg"
+			],
+			[
+				"frmHo",
+				"frmHospitalList"
+			],
+			[
+				"ShowHo",
+				"ShowHospitalDetail"
+			],
+			[
+				"frmMy",
+				"frmMyFunction"
+			],
+			[
+				"it",
+				"itemTpl"
+			],
+			[
+				"MyF",
+				"MyFunctionStore"
+			],
+			[
+				"inf",
+				"InfoStore"
+			],
+			[
+				"Cont",
+				"Content-Type"
+			],
+			[
+				"ver",
+				"vertical"
+			],
+			[
+				"我要",
+				"我要维护数据"
+			],
+			[
+				"id_tra",
+				"id_trail_praisecount2"
+			],
+			[
+				"id_trail_",
+				"id_trail_praisecount1"
+			],
+			[
+				"00d6",
+				"00d6a5"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"error",
+				"error_msg"
+			],
+			[
+				"respon",
+				"responseText"
+			],
+			[
+				"id_login",
+				"id_loginuser"
+			],
+			[
+				"Show",
+				"ShowRegisterUser"
+			],
+			[
+				"hos",
+				"hospitalValue"
+			],
+			[
+				"frmhosp",
+				"frmHospitalList"
+			],
+			[
+				"frmhos",
+				"frmHospitalDetail"
+			],
+			[
+				"hospi",
+				"hospitalName"
+			],
+			[
+				"orgHos",
+				"OrgHospitalSearchList"
+			],
+			[
+				"anim",
+				"animateActiveItem"
+			],
+			[
+				"vie",
+				"Viewport"
+			],
+			[
+				"OrgHo",
+				"OrgHospitalSearchList"
+			],
+			[
+				"or",
+				"OrgSearchList"
+			],
+			[
+				"titl",
+				"titlebar"
+			],
+			[
+				"tab",
+				"tabBarPosition"
+			],
+			[
+				"ru",
+				"border-radius"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "panel.html",
+			"settings":
+			{
+				"buffer_size": 1656,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\" />\n        <meta name=\"format-detection\" content=\"telephone=no\" />\n        <meta name=\"msapplication-tap-highlight\" content=\"no\" />\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n		<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0\">\n		<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n		<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n		<meta name=\"format-detection\" content=\"telephone=no\">\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/index.css\" />\n	    <title>Sencha Touch Tutorials</title>\n\n		<link rel=\"stylesheet\" href=\"resources/css/app.css\" />\n		<script type=\"text/javascript\" src=\"sencha-touch-all.js\" ></script>\n    </head>\n    <body>\n    </body>\n    <script language=\"JavaScript\">\n    	Ext.application({\n    	    name: 'corsee',\n\n    	    launch: function() {\n    	    	var config={\n    	    		items: [\n    	    			{\n    	    				xtype: 'toolbar',\n    	    				title: '动画',\n    	    				iconCls: 'home',\n    	    				items: [\n    	    					{\n    	    						xtype: 'button',\n    	    						text: 'back',\n    	    						handler: function() {\n    	    							window.history.back();\n    	    						}\n    	    					},{xtype:'spacer'},\n                                {\n                                    xtype: 'button',\n                                    text: 'animation',\n                                    handler: function() {\n                                        for(var i=1;i<5;i++)\n                                            frmmain.getAt(i).setHidden(true);\n                                        window.setTimeout(function(){\n                                            for(var i=1;i<5;i++)\n                                                frmmain.getAt(i).show();\n                                        },1000);\n                                    }\n                                }\n    	    				]\n    	    			},\n                        {\n                            xtype: 'button',\n                            hidden: true,\n                            text: 'left',\n                            left: 20,\n                            right: 20,\n                            top: 57,\n                            height: 30,\n                            showAnimation:{type: 'slide', direction: 'left'}\n                        },\n                        {\n                            xtype: 'button',\n                            hidden: true,\n                            text: 'right',\n                            left: 20,\n                            right: 20,\n                            top: 107,\n                            height: 30,\n                            showAnimation:{type: 'slide', direction: 'right'}\n                        },\n                        {\n                            xtype: 'button',\n                            hidden: true,\n                            text: 'up',\n                            left: 20,\n                            right: 20,\n                            top: 157,\n                            height: 30,\n                            showAnimation:{type: 'slide', direction: 'up'}\n                        },\n                        {\n                            xtype: 'button',\n                            hidden: true,\n                            text: 'down',\n                            left: 20,\n                            right: 20,\n                            top: 207,\n                            height: 30,\n                            showAnimation:{type: 'slide', direction: 'down'},\n                            hideAnimation\n                        }\n    	    		]\n    	    	};\n    	    	if(Ext.os.is.Phone)\n    	    		Ext.apply(config,{fullscreen: true});\n    	    	else\n    	    		Ext.apply(config,{width: 320,height: 576,centered: true,modal: true});\n    	    	var frmmain = Ext.create('Ext.Panel',config);\n    	    	Ext.Viewport.add(frmmain);\n                window.setTimeout(function(){\n                    for(var i=1;i<5;i++)\n                        frmmain.getAt(i).show();\n                },1000)\n    		},\n    	});\n    </script>\n</html>\n",
+			"file": "animation.html",
+			"file_size": 4153,
+			"file_write_time": 130764368030000000,
+			"settings":
+			{
+				"buffer_size": 4192,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "viewport.html",
+			"settings":
+			{
+				"buffer_size": 1659,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "list.html",
+			"settings":
+			{
+				"buffer_size": 10103,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mask.html",
+			"settings":
+			{
+				"buffer_size": 2759,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\" />\n        <meta name=\"format-detection\" content=\"telephone=no\" />\n        <meta name=\"msapplication-tap-highlight\" content=\"no\" />\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n		<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0\">\n		<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n		<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n		<meta name=\"format-detection\" content=\"telephone=no\">\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/index.css\" />\n	    <title>Sencha Touch Tutorials</title>\n\n		<link rel=\"stylesheet\" href=\"resources/css/app.css\" />\n		<script type=\"text/javascript\" src=\"sencha-touch-all.js\" ></script>\n    </head>\n    <body>\n    </body>\n    <script language=\"JavaScript\">\n    	Ext.application({\n    	    name: 'corsee',\n\n    	    launch: function() {\n                Ext.override(Ext.MessageBox, {    \n                    hide:  function() {\n                        if (this.activeAnimation && this.activeAnimation._onEnd) {\n                            this.activeAnimation._onEnd();\n                        }\n                        return this.callParent(arguments);\n                    }\n                });\n    	    	var config={\n    	    		items: [\n    	    			{\n    	    				xtype: 'toolbar',\n    	    				title: 'ajax',\n    	    				iconCls: 'home',\n    	    				items: [\n    	    					{\n    	    						xtype: 'button',\n    	    						text: 'back',\n    	    						handler: function() {\n    	    							window.history.back();\n    	    						}\n    	    					},{xtype:'spacer'},\n                                {\n                                    xtype: 'button',\n                                    text: 'Ajax Test',\n                                    handler: function() {\n                                        Ext.Ajax.request({\n                                            url:'http://42.120.4.198/e-track.php?cmd=getsign',\n                                            useDefaultXhrHeader: false,\n                                            mothed:'GET',\n                                            success: function(response) {\n                                                var ldata=JSON.parse(response.responseText);\n                                                Ext.Msg.alert('标题',ldata.error_msg,Ext.EmptyFn);\n                                            },\n                                            failure: function(data) {\n                                                Ext.Msg.alert('标题','网络不给力喔',Ext.EmptyFn);\n                                            }\n                                        })\n                                    }\n                                }\n    	    				]\n    	    			}\n    	    		]\n    	    	};\n    	    	if(Ext.os.is.Phone)\n    	    		Ext.apply(config,{fullscreen: true});\n    	    	else\n    	    		Ext.apply(config,{width: 320,height: 576,centered: true,modal: true});\n    	    	var frmmain = Ext.create('Ext.Panel',config);\n    	    	Ext.Viewport.add(frmmain);\n    		},\n    	});\n    </script>\n</html>\n",
+			"file": "ajax.html",
+			"file_size": 3166,
+			"file_write_time": 130764291800000000,
+			"settings":
+			{
+				"buffer_size": 3146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 2127,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Repository"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"installp",
+				"Package Control: Advanced Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials/js"
+	],
+	"file_history":
+	[
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials/viewport.html",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials/mask.html",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials/inputfield.html",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials/picker.html",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials/msg.html",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials/list.html",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials/index.html",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/Server/E-Track_server/st2/examples/overlays/app.js",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/Server/E-Track_server/st2/examples/forms/app.js",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Sencha Touch Tutorials/app.js",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/cordova/config.xml",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/cordova/www/index1.html",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/cordova/www/index.html",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/cordova/www/js/index.js",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/cordova/www/app.js",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/resources/sass/app.scss",
+		"/Users/honglee-apple/Library/Application Support/Sublime Text 3/Packages/JsFormat/Default (OSX).sublime-keymap",
+		"/Users/honglee-apple/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/honglee-apple/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/honglee-apple/MyFile/thirdpart/android-async-http-master/sample/src/main/java/com/loopj/android/http/sample/AsyncBackgroundThreadSample.java",
+		"/Applications/MAMP/bin/php/php5.5.17/conf/php.ini",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/Server/E-Track_server/st2/examples/pullrefresh/app.js",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Paike_html5/www/app.js",
+		"/Users/honglee-apple/Desktop/chictr.sql",
+		"/Applications/MAMP/conf/apache/httpd.conf",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/resources/sass/app.scss",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/cordova/www/test1.html",
+		"/Users/honglee-apple/Library/Application Support/Sublime Text 3/Packages/HexViewer/Default (OSX).sublime-keymap",
+		"/Users/honglee-apple/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Default (OSX).sublime-keymap",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/cordova/www/css/index.css",
+		"/Users/honglee-apple/MyFile/2013project/MyTrial/api/script/apidata.json",
+		"/Users/honglee-apple/MyFile/Html5/TouchTreeGrid-master/CalendarPicker/index.html",
+		"/Applications/MAMP/conf/php5.5.17/php.ini",
+		"/Applications/MAMP/bin/php/php5.5.17/conf/php.ini.temp",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/corsee/index.html",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/Server/E-Track_server/st2/resources/themes/stylesheets/sencha-touch/mountainview/src/_Class.scss",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/Server/E-Track_server/st2/resources/themes/stylesheets/sencha-touch/mountainview/src/_all.scss",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/Server/E-Track_server/st2/resources/themes/stylesheets/sencha-touch/mountainview/_all.scss",
+		"/Users/honglee-apple/MyFile/2013project/E-Track/Server/E-Track_server/st2/resources/themes/stylesheets/sencha-touch/mountainview/src/tab/_Panel.scss",
+		"/Volumes/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf.build",
+		"/Users/honglee-apple/MyFile/2013project/trial/E-Track/www/resources/sass/app.scss",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/corsee/platforms/ios/corsee/Plugins/com.honglee.cordova.plugin.corsee/CDVCorsee.m",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/cordova_plugin/corsee/src/ios/CDVCorsee.m",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/touch-2.4.1/resources/themes/stylesheets/sencha-touch/default/var/_Panel.scss",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/themeBuilder.js",
+		"/Users/honglee-apple/Desktop/themeBuilder.js",
+		"/Users/honglee-apple/Desktop/1.json",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/index1.php",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/cordova_plugin/corsee/www/Corsee.js",
+		"/Users/honglee-apple/Downloads/themeBuilder.js",
+		"/Volumes/E/MyFile/2013project/TestProg/exIOS/iOS_Controls/asset/asset/AsynImageView.h",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/app.js",
+		"/Users/honglee-apple/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/corsee/platforms/ios/www/plugins/com.honglee.cordova.plugin.corsee/www/Corsee.js",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/corsee/platforms/ios/www/app.js",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/corsee/www/js/index.js",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/corsee/www/index.html",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Paike_html5/www/index.html",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Paike_html5/plugins/ios.json",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/corsee_html5/stcorsee/corsee/plugins/ios.json",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Esee_html5/www/app.js",
+		"/Users/honglee-apple/MyFile/2013project/CORSEE_Intelligent/Paike_html5/plugins/com.phonegap.plugins.barcodescanner/src/ios/CDVBarcodeScanner.mm",
+		"/Users/honglee-apple/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/statistic.log"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"xtype: 'button',",
+			"window.innerWidth",
+			"ready",
+			"id: 'id_",
+			"id: 'id_search",
+			"资讯",
+			"itemtpl",
+			"variable",
+			"资讯",
+			"id_info_frame",
+			"checkuser",
+			"警告",
+			"text:",
+			"text",
+			"text:",
+			"text",
+			"text:",
+			"干预性研究",
+			"其他\n安全性\n安全性和有效性\n干预性研究\n有效性\n流行病学研究\n生物等效性试验/生物利用度试验\n病因学研究\n相关因素研究\n药代动力学/药效动力学试验\n观察性研究\n诊断试验\n预后研究\n预防性研究",
+			"szxs",
+			"32M",
+			"itemsingle",
+			"TrialSearchList",
+			"ShowDetail",
+			"id_helpcontent",
+			"Content-Security-Policy",
+			"screen/",
+			"MyNames",
+			"'image'",
+			"id: 4",
+			"id_btnlogin",
+			"MyMenuList",
+			"passwordfield",
+			"登录",
+			"saveconfig",
+			"id_statlist",
+			"loaddata",
+			"plugin",
+			"Ext.data.Store",
+			"ShowToMeCommet",
+			"id_reguser",
+			"user",
+			"options",
+			"favo",
+			"ShowInfoDetail",
+			"ShowHospitalDetail",
+			"ShowDetail",
+			"curid",
+			"TrialSearchList",
+			"TrialStore",
+			"curid",
+			"ShowMyFunction",
+			"frmMyfavorite",
+			"'功能','img/",
+			"group:'功能'",
+			"'},",
+			"group:'功能'",
+			"fovo",
+			"ldata.data",
+			"trail_",
+			"id_org_",
+			"Ext.data.Store",
+			"Ext.List",
+			"InfoList",
+			"OrgStateSearchList",
+			"OrgHospitalSearchList",
+			"tap:",
+			"id_org_fovoritecount",
+			"width:  24,\n												height: 24",
+			".data.",
+			"data.",
+			"OrgHospitalDetail",
+			"frmaddcommet",
+			"animateActiveItem",
+			"rootProperty",
+			"setProxy",
+			"frmaddcommet",
+			"id_detail_toolbar",
+			"xx-small",
+			"AddCommet",
+			"AddFovarite",
+			"AddPraise",
+			"style: 'background-size: 100% 100%',\n												width:  24,\n												height: 24",
+			"trial2015",
+			"'123'",
+			"html: '<span style=\"font-size: smaller;color:#000000\">(0)</span>',\n												width: 40",
+			"praise1.png",
+			"id_btnlogin",
+			"saveconfig",
+			"iscordova",
+			"flex: 1,\n									height: 24,",
+			"top: 12,\n									bottom: 12,",
+			"flex: 1,\n									top: 12,",
+			"height: 24,\n											top: 12",
+			"top: 12",
+			"width: 40\n										}",
+			"width: 40\n										},",
+			"xtype: 'container',\n									flex: 1,\n									top: 12,",
+			"xtype: 'container',\n								flex: 1,\n								top: 12,",
+			"		{\n										xtype: 'image',",
+			"width: 32,",
+			"html: '(0)',",
+			"backgroud-size",
+			"TrialJoinHintForm",
+			"id_detail_bar",
+			"ismyproject",
+			"this.setStyle('font-size:xx-small;background-color:#00d6a5');\n							}",
+			"down('button')[i]",
+			"id_detail_bar",
+			"Ext.getCmp('id_publicdetail').setActiveItem(this.config.index);",
+			"//width: 60",
+			"width: 60",
+			"flex: 1",
+			"x-small",
+			"width: 60",
+			"html: ",
+			"xtype: 'label'",
+			"'font-size:smaller",
+			"width: 52",
+			"background-color",
+			"html: '",
+			"text:",
+			"xtype: 'button',",
+			"border: 0,",
+			"scrollable",
+			"background-color: transparent",
+			"//iconCls",
+			"	        			//"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"信息"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "panel.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1656
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "animation.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3626,
+								3626
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "viewport.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1336,
+								1336
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 478.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5533,
+								6254
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3167.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "mask.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2124,
+								2154
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 923.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "ajax.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2519,
+								2519
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1011.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2081,
+								2081
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 178.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "stt.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"index.js",
+				"www/js/index.js"
+			],
+			[
+				"",
+				"~/MyFile/2013project/CORSEE_Intelligent/Esee_html5/www/app.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 240.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
